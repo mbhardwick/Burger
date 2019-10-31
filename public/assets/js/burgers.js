@@ -1,6 +1,6 @@
 $(function() {
 	//add burger
-	$('.addBurger').on('click', function(event){
+	$('#addBurger').on('click', function(event){
 		event.preventDefault();
 		var newBurger = {
 			burger_name: $('.newBurger').val().trim()
@@ -21,10 +21,11 @@ $(function() {
 		var eaten = {
 			devoured: devour
 		};
-		$.ajax('/api/burgers' + id, {
+		$.ajax('/api/burgers/' + id, {
 			type: 'PUT',
 			data: eaten
 		}).then(function(){
+			console.log("devoured");
 			location.reload();
 		});
 	});
