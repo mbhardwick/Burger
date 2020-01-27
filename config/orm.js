@@ -1,4 +1,5 @@
 var connection = require("./connection.js");
+
 // Print Question Marks
 function printQuestionMarks(num) {
 	var arr = [];
@@ -7,6 +8,7 @@ function printQuestionMarks(num) {
 	}
 	return arr.toString();
 };
+
 //Object to SQL
 function objToSql(ob) {
 	var arr = [];
@@ -21,6 +23,7 @@ function objToSql(ob) {
 	}
 	return arr.toString();
 };
+
 //ORM
 var orm = {
 	selectAll: function(table, cb) {
